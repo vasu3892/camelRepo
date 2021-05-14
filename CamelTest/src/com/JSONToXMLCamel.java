@@ -5,7 +5,7 @@ import org.apache.camel.ProducerTemplate;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.impl.DefaultCamelContext;
 
-public class XMLToJSONCamel {
+public class JSONToXMLCamel {
 
 	public static void main(String args[]) throws Exception {
 
@@ -13,21 +13,21 @@ public class XMLToJSONCamel {
 		try {
 			camelContext.addRoutes(new RouteBuilder() {
 				public void configure() {
-					 
+					
 					from("direct:myRoute")
-						.to("language:constant:resource:file:input/input.xml")
+						.to("language:constant:resource:file:input/input.json")
 						
 						.log("###################################")
 						.log("${body}")
 						.log("###################################")
 						
-						.marshal().xmljson()
+						.unmarshal().xmljson()
 						
 						.log("###################################")
 						.log("${body}")
 						.log("###################################")
 						
-						.to("file:output?fileName=output.json")
+						.to("file:output?fileName=output.xml")
 					;
 				}
 			});
