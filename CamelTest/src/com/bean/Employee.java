@@ -1,8 +1,18 @@
 package com.bean;
 
+import org.apache.camel.dataformat.bindy.annotation.CsvRecord;
+import org.apache.camel.dataformat.bindy.annotation.DataField;
+
+@CsvRecord(separator = ",")
 public class Employee {
+
+	@DataField(pos = 1)
 	private String EmployeeID;
+
+	@DataField(pos = 2)
 	private String Name;
+
+	@DataField(pos = 3)
 	private String Salary;
 
 	public String getEmployeeID() {
