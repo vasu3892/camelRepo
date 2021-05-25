@@ -1,6 +1,8 @@
 package com;
 
 import org.apache.camel.CamelContext;
+import org.apache.camel.Exchange;
+import org.apache.camel.Processor;
 import org.apache.camel.ProducerTemplate;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.impl.DefaultCamelContext;
@@ -16,7 +18,6 @@ public class FreeMarkerExample {
 					
 					from("direct:myRoute")
 					.streamCaching()
-					
 						.to("https://jigsaw.w3.org/HTTP/Basic/?authMethod=Basic&authUsername=guest&authPassword=guest")
 						
 						.log("###################################")
@@ -26,6 +27,16 @@ public class FreeMarkerExample {
 						.log("###################################")
 						.log("body ::: ${body}")
 						.log("###################################")
+						
+						.process(new Processor() {
+					        public void process(Exchange exchange) throws Exception {
+					           String payload = (String) exchange.getIn().getBody(String.class);
+					           
+					           String title = payload.substring(payload.indexOf("<title>") + 7);
+					           title = title.substring(0, title.indexOf("</title>"));
+					           exchange.setProperty("title", title);
+					       }
+					    })
 						
 						.to("freemarker:file:input/transform.fm")
 						

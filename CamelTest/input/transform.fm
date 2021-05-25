@@ -1,4 +1,5 @@
 <root>
+	<title>${exchange.properties.title}</title>
 	<headers>
 		<date>${headers.date}</date>
 		<content-length>${headers.content\-length}</content-length>

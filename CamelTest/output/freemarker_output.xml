@@ -1,6 +1,7 @@
 <root>
+	<title>Basic Authentication test page</title>
 	<headers>
-		<date>Tue, 25 May 2021 07:46:07 GMT</date>
+		<date>Tue, 25 May 2021 08:23:26 GMT</date>
 		<content-length>458</content-length>
 		<content-location>https://jigsaw.w3.org/HTTP/Basic/ok.html</content-location>
 		<content-type>text/html</content-type>
