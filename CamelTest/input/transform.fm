@@ -1,0 +1,15 @@
+<root>
+	<headers>
+		<date>${headers.date}</date>
+		<content-length>${headers.content\-length}</content-length>
+		<content-location>${headers.content\-location}</content-location>
+		<content-type>${headers.content\-type}</content-type>
+		<etag>${headers.etag}</etag>
+		<last-modified>${headers.last\-modified}</last-modified>
+		<server>${headers.server}</server>
+		<strict-transport-security>${headers.strict\-transport\-security}</strict-transport-security>
+		<public-key-pins>${headers.public\-key\-pins}</public-key-pins>
+		<x-frame-options>${headers.x\-frame\-options}</x-frame-options>
+		<x-xss-protection>${headers.x\-xss\-protection}</x-xss-protection>
+	</headers>
+</root>

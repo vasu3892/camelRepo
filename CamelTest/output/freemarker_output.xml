@@ -1,0 +1,15 @@
+<root>
+	<headers>
+		<date>Tue, 25 May 2021 07:46:07 GMT</date>
+		<content-length>458</content-length>
+		<content-location>https://jigsaw.w3.org/HTTP/Basic/ok.html</content-location>
+		<content-type>text/html</content-type>
+		<etag>"1lkdfte:qoguo8q8"</etag>
+		<last-modified>Sun, 25 Jun 2000 17:08:58 GMT</last-modified>
+		<server>Jigsaw/2.3.0-beta2</server>
+		<strict-transport-security>max-age=15552015; includeSubDomains; preload</strict-transport-security>
+		<public-key-pins>pin-sha256="cN0QSpPIkuwpT6iP2YjEo1bEwGpH/yiUn6yhdy+HNto="; pin-sha256="WGJkyYjx1QMdMe0UqlyOKXtydPDVrk7sl2fV+nNm1r4="; pin-sha256="LrKdTxZLRTvyHM4/atX2nquX9BeHRZMCxg3cf4rhc2I="; max-age=864000</public-key-pins>
+		<x-frame-options>deny</x-frame-options>
+		<x-xss-protection>1; mode=block</x-xss-protection>
+	</headers>
+</root>
